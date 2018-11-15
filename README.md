@@ -40,7 +40,7 @@ python main.py --is_only_test True \
 --checkpoint_path ./ref_info/charades_sta_wacv_2019_paper_ACL_k_results/trained_model.ckpt-10000 \
 --test_name paper_results
 ```
-You will get similar results listed in the row "ACL+k" in the following table.
+You will get similar results listed in the row "ACL+k" of the following table.
 
 | Model            | R@1,IoU=0.7 | R@1,IoU=0.5 | R@5,IoU=0.7 | R@5,IoU=0.5 |
 | :--------------- | ----------: | ----------: | ----------: | ----------: | 
