@@ -5,7 +5,7 @@ By Runzhou Ge, [Jiyang Gao](https://jiyanggao.github.io/), [Kan Chen](http://win
 University of Southern California (USC).
 
 ### Introduction
-This repository contains the code for *MAC: Mining Activity Concepts for Language-based Temporal Localization* in WACV 2019.
+This repository contains the code for the WACV 2019 paper, *MAC: Mining Activity Concepts for Language-based Temporal Localization*. [arXiv](https://github.com/runzhouge/MAC)
 
 
 <p align="center">
@@ -24,11 +24,11 @@ The code is for [Charades-STA](https://arxiv.org/pdf/1705.02101.pdf) dataset.
 After cloning this repo, please donwload: 
 - [visual features](https://drive.google.com/open?id=1vFxDw4AkGVgfILH-6xaHofLZ7PbWwFC2)
 - [visual activity concepts](https://drive.google.com/open?id=1biKPDmb7hbzowKLMIRSTLE0w_tWbGPAe)
-- [ref_info](https://drive.google.com/open?id=1l7IG4C0CaOjr9Zj4bSI-nBOdyIq9yzCh)
+- [ref_info](https://drive.google.com/open?id=16rFGu9rnhnH-WQeUmN7VtMgljrhGspll)
 
-ref_info contains [Charades-STA annotations](https://github.com/jiyanggao/TALL/blob/master/README.md), semantic activity concepts, checkpoints and others. After downloading ref_info.tar, untar it and move the folder to the root directory of this repo.
+ref_info contains [Charades-STA annotations](https://github.com/jiyanggao/TALL/blob/master/README.md), semantic activity concepts, checkpoints and others. After downloading ref_info.tar, untar it and move the folder to the `root/` directory of this repo.
 
-Please also change the visual feature and visual activity concepts directories in the main.py.
+Please also change the visual feature and visual activity concepts directories in the `main.py`.
 
 
 
@@ -77,7 +77,7 @@ If you find this work is helpful, please cite:
 [MIT License](LICENSE)
 
 
-#### Acknowledgements
+### Acknowledgements
 This research was supported, in part, by the Office of Naval Research under grant N00014-18-1-2050 and by an Amazon Research Award.
 
 
