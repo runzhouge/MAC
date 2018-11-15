@@ -1,52 +1,83 @@
-#08/25/2018
-This is from jiyang's original code which is also in this folder.  
-In this folder, I convert it from tf 0.12 to tf 1.8.  
+# MAC
+
+By Runzhou Ge, [Jiyang Gao](https://jiyanggao.github.io/), [Kan Chen](http://wind09.github.io/), [Ram Nevatia](http://www-bcf.usc.edu/~nevatia/ram_nevatia.html).
+
+University of Southern California (USC).
+
+### Introduction
+This repository contains the code for *MAC: Mining Activity Concepts for Language-based Temporal Localization* in WACV 2019.
 
 
-#08/25/2018
-This is from TALL\_charades\_v0.1.  
-I made it to unit level feats
-But the cross modal part may has some problem  
-
-#08/29/2018
-This is from v0.22.  
-I add save weights and the parse aruments for easy usage
-
-#08/29/2018
-This is from v0.3  
-I add the turn props here
-
-# 09/05/2018
-This is from v0.4  
-I changed it to use the new dict  
-similar to the model in v2.0.  
-The performance is good  
-
-# 09/07/2018
-This is from v0.41
-I use the clips  from the same video first, then other videos
-v0.42 will not influence the performance. Try to use this in TACOS  
-change the batch size to 28
-
-# 11/07/2018
-This is from v0.42
-I clean the code for github release.
-
-# 11/07/2018
-This is from MAC_Charades_STA
-I clean the code for github release.
+<p align="center">
+  <img src='img/framework.png' width='800'/>
+</p>
 
 
-# 11/13/2018
-this is from MAC_Charades_STA_v2
-for release
+### Requirements
+- Python 2.7
+- Tensorflow 1.0 or higher
+- others
 
-# 11/13/2018
-this is from MAC_Charades_STA_v2.1
-for release
+### Download
+The code is for [Charades-STA](https://arxiv.org/pdf/1705.02101.pdf) dataset.
+
+After cloning this repo, please donwload: 
+- [visual features](https://drive.google.com/open?id=1vFxDw4AkGVgfILH-6xaHofLZ7PbWwFC2)
+- [visual activity concepts](https://drive.google.com/open?id=1biKPDmb7hbzowKLMIRSTLE0w_tWbGPAe)
+- [ref_info](https://drive.google.com/open?id=1l7IG4C0CaOjr9Zj4bSI-nBOdyIq9yzCh)
+
+ref_info contains [Charades-STA annotations](https://github.com/jiyanggao/TALL/blob/master/README.md), semantic activity concepts, checkpoints and others. After downloading ref_info.tar, untar it and move the folder to the root directory of this repo.
+
+Please also change the visual feature and visual activity concepts directories in the main.py.
 
 
 
+### Training
+For the paper results on [Charades-STA](https://arxiv.org/pdf/1705.02101.pdf) dataset, run
 
+```
+python main.py --is_only_test True \
+--checkpoint_path ./ref_info/charades_sta_wacv_2019_paper_ACL_k_results/trained_model.ckpt-10000 \
+--test_name paper_results
+```
+You will get similar results listed in the row "ACL+k" in the following table.
+
+| Model            | R@1,IoU=0.7 | R@1,IoU=0.5 | R@5,IoU=0.7 | R@5,IoU=0.5 |
+| :--------------- | ----------: | ----------: | ----------: | ----------: | 
+| [CTRL](https://github.com/jiyanggao/TALL/blob/master/README.md)|[7.15](https://github.com/jiyanggao/TALL/blob/master/README.md)|[21.42](https://github.com/jiyanggao/TALL/blob/master/README.md)|[26.91](https://github.com/jiyanggao/TALL/blob/master/README.md)|[59.11](https://github.com/jiyanggao/TALL/blob/master/README.md)|
+| **ACL+k**        |   **12.20** |    **30.48**|    **35.13**|    **64.84**|
+
+
+To train the model from scratch, run
+```
+python main.py
+```
+
+The results and checkpoints will appear in `root/results_history/` and `root/trained_save/`, respectively.
+
+### Results Visualization
+
+<p align="center">
+  <img src='img/charades_vis.png' width='800'/>
+</p>
+
+### Citation
+If you find this work is helpful, please cite:
+
+```
+@InProceedings{Ge_2019_WACV,
+  author = {Ge, Runzhou and Gao, Jiyang and Chen, Kan and Nevatia, Ram},
+  title = {MAC: Mining Activity Concepts for Language-based Temporal Localization},
+  booktitle = {The IEEE Winter Conference on Applications of Computer Vision (WACV)},
+  month = {January},
+  year = {2019}
+}
+```
+### License
+[MIT License](LICENSE)
+
+
+#### Acknowledgements
+This research was supported, in part, by the Office of Naval Research under grant N00014-18-1-2050 and by an Amazon Research Award.
 
 
