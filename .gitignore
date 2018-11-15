@@ -1,0 +1,16 @@
+# common files
+*.pyc
+*.tar
+*.tar.gz
+
+ref_info/*
+!ref_info/.gitkeep
+
+results_history/*
+!results_history/.gitkeep
+
+tf_summary/*
+!tf_summary/.gitkeep
+
+trained_save/*
+!trained_save/.gitkeep
