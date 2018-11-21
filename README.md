@@ -40,12 +40,12 @@ python main.py --is_only_test True \
 --checkpoint_path ./ref_info/charades_sta_wacv_2019_paper_ACL_k_results/trained_model.ckpt-10000 \
 --test_name paper_results
 ```
-You will get similar results listed in the row "ACL+k" of the following table.
+You will get similar results listed in the row "ACL-K" of the following table.
 
 | Model            | R@1,IoU=0.7 | R@1,IoU=0.5 | R@5,IoU=0.7 | R@5,IoU=0.5 |
 | :--------------- | ----------: | ----------: | ----------: | ----------: | 
 | [CTRL](https://github.com/jiyanggao/TALL/blob/master/README.md)|[7.15](https://github.com/jiyanggao/TALL/blob/master/README.md)|[21.42](https://github.com/jiyanggao/TALL/blob/master/README.md)|[26.91](https://github.com/jiyanggao/TALL/blob/master/README.md)|[59.11](https://github.com/jiyanggao/TALL/blob/master/README.md)|
-| **ACL+k**        |   **12.20** |    **30.48**|    **35.13**|    **64.84**|
+| **ACL-K**        |   **12.20** |    **30.48**|    **35.13**|    **64.84**|
 
 
 To train the model from scratch, run
