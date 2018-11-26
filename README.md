@@ -5,7 +5,7 @@ By Runzhou Ge, [Jiyang Gao](https://jiyanggao.github.io/), [Kan Chen](http://win
 University of Southern California (USC).
 
 ### Introduction
-This repository contains the code for the WACV 2019 paper, *MAC: Mining Activity Concepts for Language-based Temporal Localization*. [arXiv](https://github.com/runzhouge/MAC)
+This repository contains the code for the WACV 2019 paper, *MAC: Mining Activity Concepts for Language-based Temporal Localization*. [arXiv](https://arxiv.org/abs/1811.08925)
 
 
 <p align="center">
